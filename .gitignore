@@ -1,1 +1,2 @@
-.env
+/config.py
+#File containg access tokens and keys
