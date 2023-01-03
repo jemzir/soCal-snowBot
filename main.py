@@ -14,6 +14,13 @@ def api():
 
   return tweepy.API(auth)
 
+def tweet(api: tweepy.API, message: str):
+  api.update_status(message)
+  print('Tweet success!')
+
+api = api()
+tweet(api, 'E&J tweeting from Python!')
+
 # import in tweetpy
 # https://www.youtube.com/watch?v=2UBcRiddwAo <-- use this vid
 
