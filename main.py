@@ -29,4 +29,6 @@ tweet(api, 'E&J tweeting from Python!')
 
 # create an Oauth  with the access tokens and secrets
 
-# define a tweet function that will invoke tweet posts
+# define a tweet function that will invoke tweet posts-- 
+
+# have proper authorization for the access tokens to be able to read write and dm management
