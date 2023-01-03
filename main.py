@@ -1,12 +1,18 @@
 import tweepy
 import config
 
-client = tweepy.Client(consumer_key=config.API_KEY,
-                       consumer_secret=config.API_SECRET,
-                       access_token=config.ACCESS_TOKEN,
-                       access_token_secret=config.ACCESS_TOKEN_SECRET)
+# client = tweepy.Client(consumer_key=config.API_KEY,
+#                        consumer_secret=config.API_SECRET,
+#                        access_token=config.ACCESS_TOKEN,
+#                        access_token_secret=config.ACCESS_TOKEN_SECRET)
 
-response = client.create_tweet()
+# response = client.create_tweet()
+
+def api():
+  auth = tweepy.OAuthHandler(config.API_KEY, config.API_SECRET)
+  auth.set_access_token(config.ACCESS_TOKEN, config.ACCESS_TOKEN_SECRET)
+
+  return tweepy.API(auth)
 
 # import in tweetpy
 # https://www.youtube.com/watch?v=2UBcRiddwAo <-- use this vid
