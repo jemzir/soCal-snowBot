@@ -18,8 +18,10 @@ def tweet(api: tweepy.API, message: str):
   api.update_status(message)
   print('Tweet success!')
 
+# define a function that will ping the CalTrans api and then pull the road conditions
+
 api = api()
-tweet(api, 'E&J tweeting from Python!')
+# tweet(api, 'E&J tweeting from Python!') -- the initial test to tweet from python
 
 # import in tweetpy
 # https://www.youtube.com/watch?v=2UBcRiddwAo <-- use this vid
